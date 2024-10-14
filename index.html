@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Clone</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">GitHub Clone</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="explore-link">Explore</a></li>
+                    <li><a href="#" id="marketplace-link">Marketplace</a></li>
+                    <li><a href="#" id="pull-requests-link">Pull Requests</a></li>
+                    <li><a href="#" id="issues-link">Issues</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile and Repositories Section -->
+    <section class="container profile-section">
+        <div class="profile-sidebar">
+            <img src="https://cdn.pixabay.com/photo/2024/06/25/13/12/woman-8852664_1280.jpg" alt="User Avatar" class="avatar">
+            <h2 class="username">John Doe</h2>
+            <p class="bio">Web Developer & Passionate about open-source projects and coding</p>
+        </div>
+
+        <div class="repo-section">
+            <h2>Repositories</h2>
+            <form id="repo-form" class="repo-form">
+                <input type="text" id="repo-name" placeholder="Repository Name" required>
+                <textarea id="repo-description" placeholder="Repository Description" required></textarea>
+                <button type="submit">Create Repository</button>
+            </form>
+            <ul id="repo-list" class="repo-list"></ul>
+        </div>
+    </section>
+
+    <!-- Pull Requests Section -->
+    <section class="container pull-requests-section" id="pull-requests-section" style="display: none;">
+        <h2>Pull Requests for <span id="repo-pull-request-title"></span></h2>
+        <form id="pull-request-form" class="pull-request-form">
+            <input type="text" id="pull-request-title" placeholder="Pull Request Title" required>
+            <button type="submit">Create Pull Request</button>
+        </form>
+        <ul id="pull-request-list" class="pull-request-list"></ul>
+        <button id="back-to-repos-pull" class="back-btn">Back to Repositories</button>
+    </section>
+
+    <!-- Issues Section -->
+    <section class="container issues-section" id="issues-section" style="display: none;">
+        <h2>Issues for <span id="repo-issues-title"></span></h2>
+        <form id="issue-form" class="issue-form">
+            <input type="text" id="issue-title" placeholder="Issue Title" required>
+            <button type="submit">Add Issue</button>
+        </form>
+        <ul id="issue-list" class="issue-list"></ul>
+        <button id="back-to-repos-issues" class="back-btn">Back to Repositories</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; vaishnavi Gavhane GitHub Clone.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
